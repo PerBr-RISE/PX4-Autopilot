@@ -1,0 +1,6 @@
+menuconfig EXAMPLES_MOTOR_POWER_SWITCH
+    bool "Enable Motor Power Control"
+    default y
+    help
+        This option enables the motor power control application.
+
