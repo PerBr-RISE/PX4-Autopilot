@@ -47,7 +47,7 @@
 #include <drivers/drv_hrt.h>
 #include <board_config.h>
 
-#define RELAY_PIN (GPIO_OUTPUT | GPIO_PORTI | GPIO_PIN0 | GPIO_OPENDRAIN )
+#define RELAY_PIN (GPIO_OUTPUT | GPIO_PORTE | GPIO_PIN11 | GPIO_PUSHPULL | GPIO_SPEED_2MHz | GPIO_OUTPUT_CLEAR)
 #define _STRINGIFY(s) #s
 #define STRINGIFY(s) _STRINGIFY(s)
 
@@ -69,7 +69,7 @@ __EXPORT int motor_power_switch_main(int argc, char *argv[]);
 int motor_power_switch_main(int argc, char *argv[])
 {
 	PX4_INFO("RELAY_PIN:" STRINGIFY(RELAY_PIN));
-	PX4_INFO("FMU_CAP1:" STRINGIFY(GPIO_FMU_CAP1));
+	// PX4_INFO("FMU_CAP1:" STRINGIFY(GPIO_FMU_CAP1));
 
 	if (argc < 2) {
 		PX4_ERR("Usage: motor_power <on|off>");
